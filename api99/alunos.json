@@ -1,0 +1,69 @@
+{
+  "alunos": [
+    {
+      "nome": "Matheus",
+      "idade": 21,
+      "id": 1
+    },
+    {
+      "nome": "Adiriano",
+      "idade": "28",
+      "id": 2
+    },
+    {
+      "nome": "Polly",
+      "idade": "32",
+      "id": 3
+    },
+    {
+      "nome": "Gideão",
+      "idade": 24,
+      "id": 4
+    },
+    {
+      "nome": "Márcia Regina",
+      "idade": 53,
+      "id": 5
+    },
+    {
+      "nome": "Lúcia ",
+      "idade": 26,
+      "id": 6
+    },
+    {
+      "nome": "Brenner Vinícius",
+      "idade": 21,
+      "id": 7
+    },
+    {
+      "nome": "Douglas Silva",
+      "idade": 25,
+      "id": 8
+    },
+    {
+      "nome": "Cássia Gomes",
+      "idade": 23,
+      "id": 9
+    },
+    {
+      "nome": "Lucimar Pereira ",
+      "idade": 48,
+      "id": 10
+    },
+    {
+      "nome": "Jorge Vieira ",
+      "idade": 56,
+      "id": 11
+    },
+    {
+      "nome": "ijjimkoko",
+      "idade": 8585,
+      "id": 12
+    },
+    {
+      "nome": "uhioj",
+      "idade": 582,
+      "id": 13
+    }
+  ]
+}

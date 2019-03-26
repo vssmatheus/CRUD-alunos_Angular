@@ -1,0 +1,81 @@
+<div 
+style="height: 200px;
+  background-color: transparent;
+  background-image: linear-gradient(rgb(72, 170, 255), transparent); 
+  width: 100%; position:fixed;top:0;left:0;z-index:-50">
+</div>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#" >Escola</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Add Alunos<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Matrículas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<br><br>
+
+<div>
+ 
+  <form class="card form-group">
+    <div class="col">
+      <div class="card-body form-group ">
+        
+        <p> <strong>Nome:</strong> <input class="campos form-control" type="text" name="name"  autocomplete="off"
+          placeholder="Nome do aluno" [(ngModel)]="aluno.nome"></p>
+        <p> <strong>Idade:</strong> <input class="campos form-control" type="number" name="idade" autocomplete="off"
+          placeholder="Idade do aluno" [(ngModel)]="aluno.idade"></p>
+        <button id="botaoCadastrar" class="form-control" type="button" (click)="cadastrar()"><i class="fas fa-user-plus"></i> Cadastrar</button>
+      </div>
+    </div>
+  </form>
+  <br>
+  <h2>Alunos cadastrados</h2>
+  <hr>
+
+  <div *ngIf="innerWidth > 45">
+    <table class="my_table">
+      
+      <tr>
+        <th>#id</th>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Ações</th>
+      </tr>
+
+      <!--<tr>
+        <td>1</td>
+        <td>Matheus</td>
+        <td>21</td>
+        <td><button (click)="atualizar(aluno.id)">Atualizar</button>
+          <button (click)="remover(aluno.id)">Remover</button></td>
+      </tr>-->
+
+      <tr *ngFor="let aluno of alunos">
+        <td>{{aluno.id}}</td>
+        <td>{{aluno.nome}}</td>
+        <td>{{aluno.idade}}</td> 
+        <td><button id="botaoAcoesEdit" (click)="atualizar(aluno.id)"><i class="fas fa-edit"></i></button>
+        <button id="botaoAcoesTrash" (click)="remover(aluno.id)"><i class="fas fa-trash"></i></button></td>   
+      </tr>
+
+
+    </table>
+  </div>
+</div>
+
