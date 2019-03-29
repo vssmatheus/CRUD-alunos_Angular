@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AlunosComponent } from './alunos/alunos.component';
 import { AlunosService } from './alunos.service';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -15,8 +16,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
-    
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [AlunosService, HttpClientModule],
   bootstrap: [AppComponent]

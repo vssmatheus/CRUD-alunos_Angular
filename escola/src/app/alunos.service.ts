@@ -6,6 +6,7 @@ import { AlunoModel } from './alunos/aluno.model';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AlunosService {
 
   constructor(private http: HttpClient) { }
