@@ -1,15 +1,11 @@
-<div 
-style="height: 200px;
-  background-color: transparent;
-  background-image: linear-gradient(rgb(72, 170, 255), transparent); 
-  width: 100%; position:fixed;top:0;left:0;z-index:-50">
-</div>
-
-
+<!--degradê azul claro-->
+<div class="top_degrade"></div>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="#" ><img src="./assets/images/logo-ueg-white.png" width="50px" alt="ueg"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" 
+    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -18,17 +14,19 @@ style="height: 200px;
       <li class="nav-item active">
         <a class="nav-link" href="#">Add Alunos<span class="sr-only">(current)</span></a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link" href="#">Matrículas</a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
       </li>
+
     </ul>
   </div>
-  
-</nav>
 
+</nav>
 <br><br>
 
 <div class="container">  
@@ -38,11 +36,18 @@ style="height: 200px;
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <p> <strong>Nome:</strong> <input class="campos form-control" type="text" name="name"  autocomplete="off"
+
+            <p> <strong>Nome:</strong> <input class="campos form-control" 
+              type="text" name="name"  autocomplete="off"
               placeholder="Nome do aluno" [(ngModel)]="aluno.nome"></p>
-            <p> <strong>Idade:</strong> <input class="campos form-control" type="number" name="idade" autocomplete="off"
+
+            <p> <strong>Idade:</strong> <input class="campos form-control" 
+              type="number" name="idade" autocomplete="off"
               placeholder="Idade do aluno" [(ngModel)]="aluno.idade"></p>
-            <button id="botaoCadastrar" class="form-control" type="button" (click)="cadastrar()"><i class="fas fa-user-plus"></i> Cadastrar</button>
+
+            <button id="botaoCadastrar" class="form-control" type="button" 
+            (click)="cadastrar()"><i class="fas fa-user-plus"></i> Cadastrar</button>
+
           </div>
         </div>
       </div>
@@ -66,48 +71,44 @@ style="height: 200px;
   <h2>Alunos cadastrados</h2>
   <hr>
 
-  <div *ngIf="innerWidth > 45">
+  <div >
     <table class="my_table">
-      
       <tr>
         <th>#id</th>
         <th>Nome</th>
         <th>Idade</th>
         <th>Ações</th>
       </tr>
-
-      <!--<tr>
+      <!-- tabela para visualizaçãi sem API<tr>
         <td>1</td>
         <td>Matheus</td>
         <td>21</td>
         <td><button (click)="atualizar(aluno.id)">Atualizar</button>
           <button (click)="remover(aluno.id)">Remover</button></td>
       </tr>-->
-
       <tr *ngFor="let aluno of alunos">
         <td>{{aluno.id}}</td>
         <td>{{aluno.nome}}</td>
         <td>{{aluno.idade}}</td> 
-        <td><button id="botaoAcoesEdit" (click)="atualizar(aluno.id)"><i class="fas fa-edit"></i></button>
-        <button id="botaoAcoesTrash" class="btn" (click)="remover(aluno.id)"><i class="fas fa-trash"></i></button></td>   
+        <td><button id="botaoAcoesEdit" (click)="atualizar(aluno.id)">
+          <i class="fas fa-edit"></i></button>
+        <button id="botaoAcoesTrash" class="btn" (click)="remover(aluno.id)">
+          <i class="fas fa-trash"></i></button></td>   
       </tr>
-
-
     </table>
   </div>
-
   <br><br>
-
-  
-
 </div>
 
 <div class="footer" style="width:100%; margin: 0 auto; padding-top: 120px; padding-bottom: 30px; 
   background-color: transparent; background-image: linear-gradient(transparent, rgb(0, 15, 29));">
   <footer class="footer navbar-fixed-bottom container" style="color:#ffffff; width: 100%;">
-      <p class="float-right"><a href="#" style="text-decoration:none; font-size: 25px; color:#f5f5f5">Topo <i class="fas fa-arrow-circle-up"></i></a></p>
-      <p class="float-block"><a href="http://www.ueg.br" target="_blank" style="color: #ccc; text-decoration: none">
+      <p class="float-right"><a href="#" style="text-decoration:none; font-size: 25px; 
+      color:#f5f5f5">Topo <i class="fas fa-arrow-circle-up"></i></a></p>
+      <p class="float-block"><a href="http://www.ueg.br" target="_blank" style="color: #ccc; 
+      text-decoration: none">
         Site |  <img src="./assets/images/logo-ueg-white.png" width="60px" alt="ueg"></a></p>
-      <p>&copy; 2019-2019 Matheus Vieira, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      <p>&copy; 2019-2019 Matheus Vieira, Inc. &middot; <a href="#">Privacy</a> &middot; 
+        <a href="#">Terms</a></p>
   </footer>
 </div>

@@ -3,6 +3,17 @@ h2{
   font-size: 30px;
   color: rgb(28, 26, 53);
 }
+
+.top_degrade{
+  height: 200px;
+  background-color: transparent;
+  background-image: linear-gradient(rgb(72, 170, 255), transparent); 
+  width: 100%; 
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-50
+}
 .degrade{
   height: 200px;
   background-color: transparent; /* For browsers that do not support gradients */
