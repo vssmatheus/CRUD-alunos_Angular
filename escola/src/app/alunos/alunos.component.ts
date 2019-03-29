@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlunosService } from '../alunos.service';
 import { AlunoModel } from './aluno.model';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-alunos',
@@ -18,7 +17,6 @@ export class AlunosComponent implements OnInit {
   ngOnInit() {
     this.listarAlunos();
     this.innerWidth = window.innerWidth;
-    
 
   }
 
@@ -43,11 +41,13 @@ export class AlunosComponent implements OnInit {
   cadastrar(){
     console.log(this.aluno);
     this.alunosService.cadastarAluno(this.aluno).subscribe(alunos => {
-      this.aluno= new AlunoModel();
+      this.aluno = new AlunoModel();
+      alert('Aluno Cadastrado com sucesso');
       this.listarAlunos();
      }, err => {
-       console.log('Erro ao cadastrar o aluno'), err
-    })
+// tslint:disable-next-line: no-unused-expression
+       console.log('Erro ao cadastrar o aluno'), err;
+    });
   }
 
   listarAlunos(){

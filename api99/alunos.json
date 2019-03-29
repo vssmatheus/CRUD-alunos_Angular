@@ -11,8 +11,8 @@
       "id": 2
     },
     {
-      "nome": "Polly",
-      "idade": "32",
+      "nome": "Jonas Algusto",
+      "idade": 42,
       "id": 3
     },
     {
@@ -51,9 +51,13 @@
       "id": 10
     },
     {
-      "nome": "lúciio",
-      "idade": 37,
+      "nome": "Matheus",
+      "idade": 15,
       "id": 11
+    },
+    {
+      "nome": "Gelzieny R",
+      "id": 12
     }
   ]
 }
