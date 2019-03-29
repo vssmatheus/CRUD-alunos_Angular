@@ -26,36 +26,42 @@ style="height: 200px;
       </li>
     </ul>
   </div>
+  
 </nav>
 
 <br><br>
 
-<div class="container">
-  
-  <br><br><hr>
+<div class="container">  
+<br><br><hr>
+<!--CARDS-->
   <div class="row">
-  <form class="card form-group">
-    <div class="col">
-      <div class="card-body form-group ">
-        
-        <p> <strong>Nome:</strong> <input class="campos form-control" type="text" name="name"  autocomplete="off"
-          placeholder="Nome do aluno" [(ngModel)]="aluno.nome"></p>
-        <p> <strong>Idade:</strong> <input class="campos form-control" type="number" name="idade" autocomplete="off"
-          placeholder="Idade do aluno" [(ngModel)]="aluno.idade"></p>
-        <button id="botaoCadastrar" class="form-control" type="button" (click)="cadastrar()"><i class="fas fa-user-plus"></i> Cadastrar</button>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <p> <strong>Nome:</strong> <input class="campos form-control" type="text" name="name"  autocomplete="off"
+              placeholder="Nome do aluno" [(ngModel)]="aluno.nome"></p>
+            <p> <strong>Idade:</strong> <input class="campos form-control" type="number" name="idade" autocomplete="off"
+              placeholder="Idade do aluno" [(ngModel)]="aluno.idade"></p>
+            <button id="botaoCadastrar" class="form-control" type="button" (click)="cadastrar()"><i class="fas fa-user-plus"></i> Cadastrar</button>
+          </div>
+        </div>
       </div>
-      
+      <div class="col-sm-6" style="padding-bottom: initial">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Alteração e atualização de dados</h5>
+            <p class="card-text">
+              Para Fazer alterações nos dados de alunos cadastrados, 
+              Digite as alteração desejadas nos campos ao lado informado
+              nome e idade, e em seguida clique no ícone de edição <i class="fas fa-edit"></i> 
+              correspondente ao aluno que deseja alterar.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="container" >
-      <p >
-        Para Fazer alterações nos dados de alunos cadastrados, 
-        Digite as alteração desejadas neste campo,
-        e em seguida clique no ícone de edição <i class="fas fa-edit"></i> 
-        correspondente ao aluno que deseja alterar.
-      </p>
-    </div>
-  </form>
-</div>
+
+  <!--/////////////////////////////////////////////////////-->
   <br>
   <h2>Alunos cadastrados</h2>
   <hr>
@@ -83,7 +89,7 @@ style="height: 200px;
         <td>{{aluno.nome}}</td>
         <td>{{aluno.idade}}</td> 
         <td><button id="botaoAcoesEdit" (click)="atualizar(aluno.id)"><i class="fas fa-edit"></i></button>
-        <button id="botaoAcoesTrash" (click)="remover(aluno.id)"><i class="fas fa-trash"></i></button></td>   
+        <button id="botaoAcoesTrash" class="btn" (click)="remover(aluno.id)"><i class="fas fa-trash"></i></button></td>   
       </tr>
 
 
@@ -100,7 +106,7 @@ style="height: 200px;
   background-color: transparent; background-image: linear-gradient(transparent, rgb(0, 15, 29));">
   <footer class="footer navbar-fixed-bottom container" style="color:#ffffff; width: 100%;">
       <p class="float-right"><a href="#" style="text-decoration:none; font-size: 25px; color:#f5f5f5">Topo <i class="fas fa-arrow-circle-up"></i></a></p>
-      <p class="float-block"><a href="http://www.ueg.br" style="color: #ccc; text-decoration: none">
+      <p class="float-block"><a href="http://www.ueg.br" target="_blank" style="color: #ccc; text-decoration: none">
         Site |  <img src="./assets/images/logo-ueg-white.png" width="60px" alt="ueg"></a></p>
       <p>&copy; 2019-2019 Matheus Vieira, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
   </footer>

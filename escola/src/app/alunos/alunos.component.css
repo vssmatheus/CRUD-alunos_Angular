@@ -1,9 +1,4 @@
-html, body{
-  position: relative;
-  margin: 0;
-  padding-bottom: 6rem;
-  min-height: 100%;
-}
+
 h2{
   font-size: 30px;
   color: rgb(28, 26, 53);
@@ -52,7 +47,7 @@ table {
   .campos{
     border-radius: 4px;
     background-color: transparent;
-    width: 30%;
+    width: none;
     background-position: 10px 10px; 
     background-repeat: no-repeat;
     padding-left: 40px;
@@ -78,7 +73,7 @@ table {
 
   #botaoCadastrar{
     background-color: rgb(74, 209, 74); /* Green */
-    width: 30%;
+    width: none;
     border: none;
     color: white;
     padding: 10px 20px;
