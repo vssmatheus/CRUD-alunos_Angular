@@ -39,7 +39,10 @@ export class AlunosComponent implements OnInit {
   }
 
   cadastrar(){
-    console.log(this.aluno);
+    if(this.aluno.nome == null){
+      alert('O campo "Nome" é Obrigatório'); 
+      return null; 
+     }else{    
     this.alunosService.cadastarAluno(this.aluno).subscribe(alunos => {
       this.aluno = new AlunoModel();
       alert('Aluno Cadastrado com sucesso');
@@ -48,6 +51,7 @@ export class AlunosComponent implements OnInit {
 // tslint:disable-next-line: no-unused-expression
        console.log('Erro ao cadastrar o aluno'), err;
     });
+  }
   }
 
   listarAlunos(){

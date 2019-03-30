@@ -12,7 +12,12 @@ export class AlunosService {
   constructor(private http: HttpClient) { }
 
   cadastarAluno(aluno: AlunoModel): Observable<any>{
+    if(aluno.nome === '' || aluno.idade < 1){
+      alert('Nome vazio'); 
+      return null; 
+     }else {
     return this.http.post("http://localhost:3000/alunos/",aluno)
+  }
   }
 
   listarAlunos(): Observable<any>{

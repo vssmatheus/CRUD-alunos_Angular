@@ -38,11 +38,11 @@
           <div class="card-body">
 
             <p> <strong>Nome:</strong> <input class="campos form-control" 
-              type="text" name="name"  autocomplete="off"
+              type="text" name="name"  autocomplete="off" minlength="3"
               placeholder="Nome do aluno" [(ngModel)]="aluno.nome"></p>
 
             <p> <strong>Idade:</strong> <input class="campos form-control" 
-              type="number" name="idade" autocomplete="off"
+              type="number" name="idade" autocomplete="off" minlength="1"
               placeholder="Idade do aluno" [(ngModel)]="aluno.idade"></p>
 
             <button id="botaoCadastrar" class="form-control" type="button" data-toggle="modal" data-target="#confirmarCadastro"
